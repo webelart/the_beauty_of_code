@@ -1,6 +1,6 @@
 /*
     Link to the task: https://leetcode.com/problems/binary-tree-right-side-view/description/
-    Decision:
+    Time Complexity: O(N)
 */
 
 var rightSideView = function(root) {
