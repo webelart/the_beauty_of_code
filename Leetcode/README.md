@@ -1,6 +1,114 @@
 # Leetcode
 
-## 199. Binary Tree Right Side View
+## 34. Find First and Last Position of Element in Sorted Array (medium) DO NOT RESOLVED :(
+
+- [Link to the task](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+
+### Decision
+
+```js
+var searchRange = function(nums, target) {
+    let start = -1;
+    let end = -1;
+    let itHasSeenOnce = false;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] === target && !itHasSeenOnce) {
+            itHasSeenOnce = true;
+            start = i;
+        }
+
+        if (nums[i] !== target && itHasSeenOnce) {
+            end = i - 1;
+        }
+    }
+
+    return [start, end];
+};
+```
+
+## 94. Binary Tree Inorder Traversal (easy)
+
+- [Link to the task](https://leetcode.com/problems/binary-tree-inorder-traversal/)
+
+### Decision
+
+```js
+var inorderTraversal = function(root) {
+    if (!root) {
+        return [];
+    }
+
+    const curr = root;
+    const result = [];
+
+    inOrder(curr, (value) => {
+        result.push(value)
+    });
+
+    return result;
+};
+
+function inOrder(node, callback) {
+    if (node.left) {
+        inOrder(node.left, callback);
+    }
+
+    callback(node.val);
+
+    if (node.right) {
+        inOrder(node.right, callback);
+    }
+}
+```
+
+## 167. Two Sum II - Input Array Is Sorted (medium)
+
+- [Link to the task](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
+
+### Decision
+
+```js
+var twoSum = function(numbers, target) {
+    /**
+        # 1. loop an array of numbers.
+        # 2. detect target.
+        # 3. using binary search look for second pair of target
+    **/
+
+    for (let i = 0; i < numbers.length; i++) {
+        const foundIndex = binarySearchId(numbers, i, numbers.length, target - numbers[i]);
+        if (foundIndex  > -1) {
+            return [i + 1, foundIndex + 1];
+        }
+    }
+
+    return [-1, -1];
+};
+
+function binarySearchId(numbers, from, to, target) {
+    let start = from;
+    let end = to;
+
+    while (end - start > 1) {
+        const middle = Math.floor((start + end) / 2);
+
+        if (numbers[middle] === target) {
+            return middle;
+        }
+
+        if (numbers[middle] < target) {
+            start = middle;
+        } else {
+            end = middle;
+        }
+    }
+
+    return -1;
+}
+```
+
+## 199. Binary Tree Right Side View (medium)
 
 - [Link to the task](https://leetcode.com/problems/binary-tree-right-side-view/description/)
 - [English Explanation (YouTube)](https://youtu.be/PYJK-MhGsvU)
@@ -28,6 +136,124 @@ var rightSideView = function(root) {
         if (el.node.right) {
             queue.push({ node: el.node.right, level: el.level + 1});
         }
+    }
+
+    return result;
+};
+```
+
+## 238. Product of Array Except Self (meduim)
+
+- [Link to the task](https://leetcode.com/problems/product-of-array-except-self/description/)
+   
+### Decision
+```js
+var productExceptSelf = function(nums) {
+    const leftProduct = new Array(nums.length);
+    const rightProduct = new Array(nums.length);
+    leftProduct[0] = nums[0];
+    rightProduct[nums.length - 1] = nums[nums.length - 1];
+    /* left [] right */
+
+    for (let i = 1; i < nums.length; i++) {
+        leftProduct[i] = leftProduct[i - 1] * nums[i];
+    }
+
+    for (let i = nums.length - 2; i >= 0; i--) {
+        rightProduct[i] = rightProduct[i + 1] * nums[i];
+    }
+    
+    const result = new Array(nums.length);
+    for (let i = 0; i < nums.length; i++) {
+        if (i === 0) {
+            result[i] = rightProduct[i + 1];
+        } else if (i === nums.length - 1) {
+            result[i] = leftProduct[i - 1];
+        } else {
+            result[i] = leftProduct[i - 1] * rightProduct[i + 1];
+        }
+    }
+
+    return result;
+};
+```
+
+## 953. Verifying an Alien Dictionary (easy)
+
+- [Link to the task](https://leetcode.com/problems/verifying-an-alien-dictionary/description/)
+   
+### Decision
+```js
+var isAlienSorted = function(words, order) {
+    const orderRank = {};
+
+    for (let i = 0; i < order.length; i++) {
+        orderRank[order[i]] = i + 1;
+    }
+
+    for (let i = 0; i < words.length - 1; i++) {
+        for (let j = 0; j < words[i].length; j++) {
+            if (j >= words[i + 1].length) {
+                return false;
+            }
+
+            const currentChar = words[i][j];
+            const nextChar = words[i + 1][j];
+            
+            if (orderRank[currentChar] === orderRank[nextChar]) {
+                continue;
+            }
+            
+            if (orderRank[currentChar] > orderRank[nextChar]) {
+                return false;
+            }
+
+            break;
+        }
+    }
+
+    return true;
+};
+```
+
+## 1249. Minimum Remove to Make Valid Parentheses (medium)
+
+- [Link to the task](https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/)
+   
+### Decision
+```js
+var minRemoveToMakeValid = function(s) {
+    const stack = [];
+    let result = '';
+ 
+    for (let i = 0; i < s.length; i++) {
+        const lastStack = stack[stack.length - 1];
+        if (s[i] === '(') {
+            stack.push({ i, char: s[i] });
+            continue;
+        }
+
+        if (s[i] === ')') {
+            if (lastStack && lastStack.char === '(') {
+                stack.pop();
+            } else {
+               stack.push({ i, char: s[i] });
+            }
+            continue;
+        }
+    }
+
+    const wrongBracesHash = stack.reduce((acc, item) => {
+        acc[item.i] = true;
+        return acc;
+    }, {})
+
+    for (let i = 0; i < s.length; i++) {
+        if (wrongBracesHash[i]) {
+            continue;
+        }
+
+        result += s[i];
     }
 
     return result;
