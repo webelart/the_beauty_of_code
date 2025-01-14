@@ -15,3 +15,16 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 - [695. Max Area of Island (medium)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#695-max-area-of-island)
 - [953. Verifying an Alien Dictionary (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
 - [1249. Minimum Remove to Make Valid Parentheses (medium)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
+
+## BigFrontend.Dev
+
+### React
+— [1. The React Counter app](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#1-the-react-counter-app)
+— [2. useTimeout()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#2-usetimeout)
+— [3. useIsFirstRender()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#3-useisfirstrender)
+— [4. useSWR() I](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#4-useswr-i)
+— [5. usePrevious()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#5-useprevious)
+— [6. useHover()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#6-usehover)
+— [7. useToggle()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#7-usetoggle)
+— [8. useDebounce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#8-usedebounce)
+— [9. useEffectOnce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#9-useeffectonce)
