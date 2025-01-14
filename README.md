@@ -7,4 +7,4 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 
 ## Leetcode
 
-- [199. Binary Tree Right Side View](/Leetcode/199_binary_tree_right_side_view/199_binary_tree_right_side_view.js)
+- [199. Binary Tree Right Side View](https://github.com/webelart/the_beauty_of_code/tree/main/Leetcode#199-binary-tree-right-side-view)
