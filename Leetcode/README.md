@@ -1,32 +1,5 @@
 # Leetcode
 
-## 34. Find First and Last Position of Element in Sorted Array (medium) DO NOT RESOLVED :(
-
-- [Link to the task](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/description/)
-
-### Decision
-
-```js
-var searchRange = function(nums, target) {
-    let start = -1;
-    let end = -1;
-    let itHasSeenOnce = false;
-
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === target && !itHasSeenOnce) {
-            itHasSeenOnce = true;
-            start = i;
-        }
-
-        if (nums[i] !== target && itHasSeenOnce) {
-            end = i - 1;
-        }
-    }
-
-    return [start, end];
-};
-```
-
 ## 94. Binary Tree Inorder Traversal (easy)
 
 - [Link to the task](https://leetcode.com/problems/binary-tree-inorder-traversal/)
@@ -108,6 +81,33 @@ function binarySearchId(numbers, from, to, target) {
 }
 ```
 
+## 169. Majority Element (easy)
+
+- [Link to the task](https://leetcode.com/problems/majority-element/description/)
+
+### Decision
+```js
+var majorityElement = function(nums) {
+    const hash = {};
+
+    for (let i = 0; i < nums.length; i++) {
+        hash[nums[i]] = (hash[nums[i]] || 0) + 1;
+    }
+
+    let maxKeyByValue = -Infinity;
+    let maxValue = -Infinity;
+
+    for (let key in hash) {
+        if (hash[key] > maxValue) {
+            maxValue = hash[key];
+            maxKeyByValue = key;
+        }
+    }
+
+    return Number(maxKeyByValue);
+};
+```
+
 ## 199. Binary Tree Right Side View (medium)
 
 - [Link to the task](https://leetcode.com/problems/binary-tree-right-side-view/description/)
@@ -176,6 +176,39 @@ var productExceptSelf = function(nums) {
 
     return result;
 };
+```
+
+## 695. Max Area of Island
+
+- [Link to the task](https://leetcode.com/problems/max-area-of-island/)
+
+```js
+var inorderTraversal = function(root) {
+    if (!root) {
+        return [];
+    }
+
+    const curr = root;
+    const result = [];
+
+    inOrder(curr, (value) => {
+        result.push(value)
+    });
+
+    return result;
+};
+
+function inOrder(node, callback) {
+    if (node.left) {
+        inOrder(node.left, callback);
+    }
+
+    callback(node.val);
+
+    if (node.right) {
+        inOrder(node.right, callback);
+    }
+}
 ```
 
 ## 953. Verifying an Alien Dictionary (easy)
