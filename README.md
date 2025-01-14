@@ -19,12 +19,13 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 ## BigFrontend.Dev
 
 ### React
-— [1. The React Counter app](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#1-the-react-counter-app)
-— [2. useTimeout()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#2-usetimeout)
-— [3. useIsFirstRender()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#3-useisfirstrender)
-— [4. useSWR() I](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#4-useswr-i)
-— [5. usePrevious()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#5-useprevious)
-— [6. useHover()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#6-usehover)
-— [7. useToggle()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#7-usetoggle)
-— [8. useDebounce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#8-usedebounce)
-— [9. useEffectOnce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#9-useeffectonce)
+
+- [1. The React Counter app](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#1-the-react-counter-app)
+- [2. useTimeout()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#2-usetimeout)
+- [3. useIsFirstRender()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#3-useisfirstrender)
+- [4. useSWR() I](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#4-useswr-i)
+- [5. usePrevious()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#5-useprevious)
+- [6. useHover()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#6-usehover)
+- [7. useToggle()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#7-usetoggle)
+- [8. useDebounce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#8-usedebounce)
+- [9. useEffectOnce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/React#9-useeffectonce)
