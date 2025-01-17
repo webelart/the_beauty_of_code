@@ -1,5 +1,6 @@
 # The beauty of code
-![photo](https://github.com/user-attachments/assets/289ea581-3fc1-4114-86fd-f12525c54b0d)
+![DSC00363](https://github.com/user-attachments/assets/615879cd-5972-4b11-82f9-3e6141da3734)
+
 
 Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degree and over 14 years of commercial experience. In this repo, I am going to push tasks that I solve to prepare for interviews without using modern technologies like ChatGPT. I am trying to make decisions with the best Time Complexity and Space Complexity.
 
