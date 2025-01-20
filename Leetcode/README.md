@@ -178,6 +178,89 @@ var productExceptSelf = function(nums) {
 };
 ```
 
+## 297. Serialize and Deserialize Binary Tree
+
+- [Link to the task](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/)
+- [English Explanation (YouTube)](https://youtu.be/PYJK-MhGsvU)
+- [Russian Explanation (YouTube)](https://youtu.be/KUTmxI1SMxA)
+
+```
+function TreeNode(val) {
+    this.val = val;
+    this.left = this.right = null;
+}
+
+var serialize = function(root) {
+    if (!root) {
+        return [];
+    }
+
+    const queue = [root];
+    const result = [root.val];
+
+    while(queue.length) {
+        const currentNode = queue.shift();
+
+        if (currentNode.left) {
+            queue.push(currentNode.left);
+            result.push(currentNode.left.val);
+        } else {
+            result.push(null);
+        }
+
+        if (currentNode.right) {
+            queue.push(currentNode.right);
+            result.push(currentNode.right.val);
+        } else {
+            result.push(null);
+        }
+    }
+
+    return result;
+};
+
+/**
+ * Decodes your encoded data to tree.
+ *
+ * @param {string} data
+ * @return {TreeNode}
+ */
+var deserialize = function(data) {
+    if (data.length === 0) {
+        return null;
+    }
+
+    const tree = new TreeNode(data[0]);
+    const stack = [tree];
+    
+    for (let i = 1; i < data.length; i++) {
+        const currentNode = queue.pop();
+
+        if (!currentNode?.left) {
+            if (data[i] !== null) {
+                currentNode.left = new TreeNode(data[i]);
+                queue.unshift(currentNode.left);
+            }
+
+            i++;
+
+            if (i >= data.length) {
+                break;
+            }
+        }
+
+        if (!currentNode?.right) {
+            if (data[i] !== null) {
+                currentNode.right = new TreeNode(data[i]);
+                queue.unshift(currentNode.right);
+            }
+        }
+    }
+
+    return tree;
+};
+```
+
 ## 695. Max Area of Island
 
 - [Link to the task](https://leetcode.com/problems/max-area-of-island/)
