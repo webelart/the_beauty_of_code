@@ -184,7 +184,7 @@ var productExceptSelf = function(nums) {
 - [English Explanation (YouTube)](https://youtu.be/PYJK-MhGsvU)
 - [Russian Explanation (YouTube)](https://youtu.be/KUTmxI1SMxA)
 
-```
+```js
 function TreeNode(val) {
     this.val = val;
     this.left = this.right = null;
