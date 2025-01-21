@@ -1,5 +1,5 @@
 # The beauty of code
-![DSC00363](https://github.com/user-attachments/assets/615879cd-5972-4b11-82f9-3e6141da3734)
+![test](https://github.com/user-attachments/assets/9462f653-8ea0-427c-8514-357d08702824)
 
 Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degree and over 14 years of commercial experience. In this repo, I am going to push tasks that I solve to prepare for interviews without using modern technologies like ChatGPT. I am trying to make decisions with the best Time Complexity and Space Complexity.
 
@@ -12,6 +12,7 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 - [169. Majority Element (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#169-majority-element-easy)
 - [199. Binary Tree Right Side View (medium)](https://github.com/webelart/the_beauty_of_code/tree/main/Leetcode#199-binary-tree-right-side-view)
 - [238. Product of Array Except Self (meduim)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#238-product-of-array-except-self-meduim)
+- [297. Serialize and Deserialize Binary Tree (hard)](https://github.com/webelart/the_beauty_of_code/tree/main/Leetcode#297-serialize-and-deserialize-binary-tree)
 - [695. Max Area of Island (medium)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#695-max-area-of-island)
 - [953. Verifying an Alien Dictionary (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
 - [1249. Minimum Remove to Make Valid Parentheses (medium)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
