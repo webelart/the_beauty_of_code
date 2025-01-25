@@ -21,11 +21,11 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 
 ### JavaScript
 
-— [1. Implement curry()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#1-implement-curry)
-— [4. Implement basic throttle()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#4-implement-basic-throttle)
-— [5. implement throttle() with leading & trailing option](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#5-implement-throttle-with-leading--trailing-option)
-— [6. Implement basic debounce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#6-implement-basic-debounce)
-— [7. Implement debounce() with leading & trailing option](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#6-implement-basic-debounce)
+- [1. Implement curry()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#1-implement-curry)
+- [4. Implement basic throttle()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#4-implement-basic-throttle)
+- [5. implement throttle() with leading & trailing option](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#5-implement-throttle-with-leading--trailing-option)
+- [6. Implement basic debounce()](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#6-implement-basic-debounce)
+- [7. Implement debounce() with leading & trailing option](https://github.com/webelart/the_beauty_of_code/tree/main/BigFrontend.Dev/JavaScript#6-implement-basic-debounce)
 
 ### React
 
