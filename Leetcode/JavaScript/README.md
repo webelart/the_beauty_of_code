@@ -31,3 +31,30 @@ Array.prototype.last = function() {
     return this.length ? this[this.length - 1] : -1;
 };
 ```
+
+## 2620. Counter
+
+- [Link to the task](https://leetcode.com/problems/counter/description/)
+
+### Decision
+
+```js
+var createCounter = function(n) {
+    return function() {
+        return n++;
+    };
+};
+```
+
+## 2621. Sleep
+
+- [Link to the task](https://leetcode.com/problems/sleep/)
+
+### Decision
+```js
+async function sleep(millis) {
+    return new Promise((resolve) => {
+        setTimeout(resolve, millis)
+    });
+}
+```
