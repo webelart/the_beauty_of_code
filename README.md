@@ -19,7 +19,7 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 
 ### JavaScript
 
-- [2619. Array Prototype Last (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#94-binary-tree-inorder-traversal-easy)
+- [2619. Array Prototype Last (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/JavaScript/README.md#2619-array-prototype-last)
 
 ## BigFrontend.Dev
 
