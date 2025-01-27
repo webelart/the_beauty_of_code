@@ -17,6 +17,10 @@ Hello, my name is Elena Litvinova. I am a Software Engineer with a Master's degr
 - [953. Verifying an Alien Dictionary (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
 - [1249. Minimum Remove to Make Valid Parentheses (medium)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#953-verifying-an-alien-dictionary-easy)
 
+### JavaScript
+
+- [2619. Array Prototype Last (easy)](https://github.com/webelart/the_beauty_of_code/blob/main/Leetcode/README.md#94-binary-tree-inorder-traversal-easy)
+
 ## BigFrontend.Dev
 
 ### JavaScript
