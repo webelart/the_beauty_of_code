@@ -74,7 +74,7 @@ function throttle(fn, t) {
       isWaiting = true;
       setTimeout(() => {
         isWaiting = false;
-        execute();
+        caller();
       }, t);
     }
   }
