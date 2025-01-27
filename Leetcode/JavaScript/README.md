@@ -58,3 +58,30 @@ async function sleep(millis) {
     });
 }
 ```
+
+## 2676. Throttle
+- [Link to the task](https://leetcode.com/problems/throttle/)
+
+```js
+function throttle(fn, t) {
+  let lastArgs = null;
+  let isWaiting = false;
+
+  function caller() {
+    if (!isWaiting && lastArgs) {
+      fn(...lastArgs);
+      lastArgs = null;
+      isWaiting = true;
+      setTimeout(() => {
+        isWaiting = false;
+        execute();
+      }, t);
+    }
+  }
+
+  return function(...args) {
+    lastArgs = args;
+    caller();
+  };
+}
+```
