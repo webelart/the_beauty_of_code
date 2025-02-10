@@ -181,6 +181,8 @@ var productExceptSelf = function(nums) {
 ## 286. Walls and gates (meduim)
 
 - [Link to the task](https://leetcode.com/problems/walls-and-gates/description/)
+- [English Explanation (YouTube)](https://www.youtube.com/watch?v=ffVO_fQGKwE)
+- [Russian Explanation (YouTube)](https://www.youtube.com/watch?v=sjoPwfq5d0s)
    
 ### Decision
 ```js
