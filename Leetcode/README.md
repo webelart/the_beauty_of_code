@@ -178,6 +178,119 @@ var productExceptSelf = function(nums) {
 };
 ```
 
+## 286. Walls and gates (meduim)
+
+- [Link to the task](https://leetcode.com/problems/walls-and-gates/description/)
+   
+### Decision
+```js
+/**
+ * @param {number[][]} rooms
+ * @return {void} Do not return anything, modify rooms in-place instead.
+ */
+ 
+/**
+ O(N^2)
+ 1. Мы перебираем каждый элемент матрицы:
+    1.1. Если мы нашли gate, то мы начинаем заполнять всю матрицу движением
+        до этих ворот, с условиями, что цифра >= step
+
+ O(N)
+ 1. Собрать все gates в queue
+ 2. И далее перебираем очередь, добавляя в нее новые пустые клетки.
+*/
+
+const WALL = -1;
+const EMPTY = 2147483647;
+const GATE = 0;
+
+var wallsAndGates = function(rooms) {
+		const ROW_LENGTH = rooms.length;
+    if (ROW_LENGTH === 0) return;
+
+    const COL_LENGTH = rooms[0].length;
+
+    for (let i = 0; i < ROW_LENGTH; i++) {
+        for (let j = 0; j < COL_LENGTH; j++) {
+            if (rooms[i][j] === 0) {
+                makeRoute(i, j, 0)
+            }
+        }
+    }
+
+    function makeRoute(i, j, step) {
+        if (i < 0 || j < 0 || i >= ROW_LENGTH || j >= COL_LENGTH || rooms[i][j] === WALL) {
+            return;
+        }
+
+        if (rooms[i][j] >= step) {
+            rooms[i][j] = step;
+
+            makeRoute(i - 1, j, step + 1);
+            makeRoute(i + 1, j, step + 1);
+            makeRoute(i, j - 1, step + 1);
+            makeRoute(i, j + 1, step + 1);
+        }
+    }
+
+    return rooms;
+};
+
+
+
+/**
+ * @param {number[][]} rooms
+ * @return {void} Do not return anything, modify rooms in-place instead.
+ */
+
+const WALL = -1;
+const EMPTY = 2147483647;
+const GATE = 0;
+
+var wallsAndGates = function(rooms) {
+    const ROW_LENGTH = rooms.length;
+    if (ROW_LENGTH === 0) return;
+
+    const COL_LENGTH = rooms[0].length;
+
+    const queue = [];
+
+    for (let i = 0; i < rooms.length; i++) {
+        for (let j = 0; j < rooms[i].length; j++) {
+            if (rooms[i][j] === GATE) {
+                queue.push([i, j]);
+            }
+        }
+    }
+
+    while(queue.length) {
+        const [i, j] = queue.shift();
+
+        manageRoom([i - 1, j], [i, j]);
+        manageRoom([i + 1, j], [i, j]);
+        manageRoom([i, j - 1], [i, j]);
+        manageRoom([i, j + 1], [i, j]);
+    }
+    
+    function manageRoom([newRow, newCol], [row, col]) {
+        if (
+            newRow < 0
+            || newCol < 0
+            || newRow >= ROW_LENGTH
+            || newCol >= COL_LENGTH
+            || rooms[newRow][newCol] < EMPTY
+        ) {
+            return;
+        }
+
+        rooms[newRow][newCol] = rooms[row][col] + 1;
+        queue.push([ newRow, newCol ]);
+    }
+
+    return rooms;
+};
+```
+
 ## 297. Serialize and Deserialize Binary Tree
 
 - [Link to the task](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/)
