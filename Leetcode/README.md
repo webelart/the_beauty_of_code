@@ -257,8 +257,8 @@ var wallsAndGates = function(rooms) {
 
     const queue = [];
 
-    for (let i = 0; i < rooms.length; i++) {
-        for (let j = 0; j < rooms[i].length; j++) {
+    for (let i = 0; i < ROW_LENGTH; i++) {
+        for (let j = 0; j < COL_LENGTH; j++) {
             if (rooms[i][j] === GATE) {
                 queue.push([i, j]);
             }
