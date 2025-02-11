@@ -280,7 +280,7 @@ var wallsAndGates = function(rooms) {
         }
 
         rooms[i][j] = step;
-        queue.push([ i, j ]);
+        queue.push([i, j]);
     }
 
     return rooms;
