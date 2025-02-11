@@ -268,18 +268,18 @@ var wallsAndGates = function(rooms) {
         const [i, j] = queue.shift();
         const step = rooms[i][j];
 
-        manageRoom(i - 1, j, step);
-        manageRoom(i + 1, j, step);
-        manageRoom(i, j - 1, step);
-        manageRoom(i, j + 1, step);
+        manageRoom(i - 1, j, step + 1);
+        manageRoom(i + 1, j, step + 1);
+        manageRoom(i, j - 1, step + 1);
+        manageRoom(i, j + 1, step + 1);
     }
     
     function manageRoom(i, j, step) {
-        if (i < 0 || j < 0 || i>= ROW_LENGTH || j >= COL_LENGTH || rooms[i][j] < EMPTY) {
+        if (i < 0 || j < 0 || i >= ROW_LENGTH || j >= COL_LENGTH || rooms[i][j] < EMPTY) {
             return;
         }
 
-        rooms[i][j] = step + 1;
+        rooms[i][j] = step;
         queue.push([ i, j ]);
     }
 
