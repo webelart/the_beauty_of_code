@@ -207,7 +207,7 @@ const EMPTY = 2147483647;
 const GATE = 0;
 
 var wallsAndGates = function(rooms) {
-		const ROW_LENGTH = rooms.length;
+    const ROW_LENGTH = rooms.length;
     if (ROW_LENGTH === 0) return;
 
     const COL_LENGTH = rooms[0].length;
@@ -244,7 +244,6 @@ var wallsAndGates = function(rooms) {
  * @param {number[][]} rooms
  * @return {void} Do not return anything, modify rooms in-place instead.
  */
-
 const WALL = -1;
 const EMPTY = 2147483647;
 const GATE = 0;
@@ -267,26 +266,21 @@ var wallsAndGates = function(rooms) {
 
     while(queue.length) {
         const [i, j] = queue.shift();
+        const step = rooms[i][j];
 
-        manageRoom([i - 1, j], [i, j]);
-        manageRoom([i + 1, j], [i, j]);
-        manageRoom([i, j - 1], [i, j]);
-        manageRoom([i, j + 1], [i, j]);
+        manageRoom(i - 1, j, step);
+        manageRoom(i + 1, j, step);
+        manageRoom(i, j - 1, step);
+        manageRoom(i, j + 1, step);
     }
     
-    function manageRoom([newRow, newCol], [row, col]) {
-        if (
-            newRow < 0
-            || newCol < 0
-            || newRow >= ROW_LENGTH
-            || newCol >= COL_LENGTH
-            || rooms[newRow][newCol] < EMPTY
-        ) {
+    function manageRoom(i, j, step) {
+        if (i < 0 || j < 0 || i>= ROW_LENGTH || j >= COL_LENGTH || rooms[i][j] < EMPTY) {
             return;
         }
 
-        rooms[newRow][newCol] = rooms[row][col] + 1;
-        queue.push([ newRow, newCol ]);
+        rooms[i][j] = step + 1;
+        queue.push([ i, j ]);
     }
 
     return rooms;
